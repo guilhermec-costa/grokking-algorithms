@@ -30,6 +30,6 @@ def binary_search(ordered_list:list[int], target_item:int):
     return None
 
 if __name__ == "__main__":
-    ORDERED_LIST = [1, 3, 5, 7, 9, 11]
+    ORDERED_LIST = list(range(240000));
     print(binary_search(ORDERED_LIST, target_item=7))
     print(binary_search(ORDERED_LIST, target_item=10))
