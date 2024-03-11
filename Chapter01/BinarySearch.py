@@ -1,3 +1,7 @@
+"""
+Logarithmic execution time.
+"""
+
 def binary_search(ordered_list:list[int], target_item:int):
     """
     if 'target_item' exists in 'ordered_list', then return its location index,
