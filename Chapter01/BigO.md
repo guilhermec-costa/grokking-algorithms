@@ -1,6 +1,7 @@
 # BigO Notation 
 
 BigO tells how fast a algorithm grows in term of number of operations
+algorithm grows = number of operations grows
 
 Given that an algorithm is tested on "n" elements, BigO notation provides how many operations that algorithm takes to get to the target "n" element in the worst scenario.
 BigO notation doesn't care if the algorithm perfomed better in one take, or worse in another take.
@@ -23,3 +24,10 @@ Simple search: linear exection-time -> O(n)
 
 Binary search: logarithmic execution-time -> O(log n)
 
+Arrays:
+    -> Insertion: O(n)
+    -> Reading: O(1)
+
+Linked Lists:
+    -> Insertion: O(1)
+    -> Reading: O(n)
