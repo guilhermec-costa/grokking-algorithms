@@ -3,7 +3,7 @@
 BigO tells how fast a algorithm grows in term of number of operations
 algorithm grows = number of operations grows
 
-Given that an algorithm is tested on "n" elements, BigO notation provides how many operations that algorithm takes to get to the target "n" element in the worst scenario.
+Given that an algorithm is tested on "n" elements.
 BigO notation doesn't care if the algorithm perfomed better in one take, or worse in another take.
 It only cares about how that algorithm perform in the worst possible case.
 
