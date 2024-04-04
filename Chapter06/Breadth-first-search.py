@@ -20,11 +20,50 @@ This way, always the shorter path is going to be find
 
 To search the elements in the order that they are added, it is necessary a Queue (FIFO data structure), different from stacks (LIFO data structures)
 The first to get in, is the first to get out
-Possible actions: enqueue and dequeue
+Possible actions: enqueue(push) and dequeue(pop)
+This way, a item is enqueued. Then it is checked. If it is not the target item, all of its neighbors are enqueued.
+And the process is repeated to the neighbors
 
+If the queue gets empty at any moment, it means that any of the itens in that group of connection is the target item.
 """
 
-graph = {}
+from collections import deque
 
-graph["you"] = ["Churros", "Shoyou"]
-print(graph)
+search_queue = deque()
+graph = {}
+graph["you"] = ["claire", "bob", "alice"]
+search_queue += graph["you"]
+# all of "you" neighbors are added to the queue as well
+
+graph["bob"] = ["anuj orange", "peggy"]
+graph["alice"] = ["peggy"]
+graph["claire"] = ["thom", "jonny"]
+graph["anuj"] = []
+graph["peggy"] = ["you"]
+graph["thom"] = []
+graph["jonny"] = []
+
+def is_vendedor(name:str):
+    if "orange" in name:
+        return name;
+    
+    return False
+
+def breadth_first_search(name):
+    search_queue = deque()
+    search_queue += graph[name]
+    verified_names = []
+
+    while search_queue:
+        person_to_search = search_queue.popleft()
+        if not person_to_search in verified_names:
+            if is_vendedor(person_to_search):
+                print(person_to_search + " is a vendedor!")
+                return True
+            else:
+                search_queue += graph[person_to_search]
+                verified_names.append(person_to_search)
+
+    return False
+
+breadth_first_search("you")
