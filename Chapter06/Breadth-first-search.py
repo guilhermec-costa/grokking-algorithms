@@ -24,7 +24,10 @@ Possible actions: enqueue(push) and dequeue(pop)
 This way, a item is enqueued. Then it is checked. If it is not the target item, all of its neighbors are enqueued.
 And the process is repeated to the neighbors
 
-If the queue gets empty at any moment, it means that any of the itens in that group of connection is the target item.
+Topologic Ordenation: it is a way of build a ordered list from a graph
+Tree: it is a special graph where none of the arrows points back
+
+If the queue gets empty at any moment, it means that none of the itens in that group of connection is the target item.
 """
 
 from collections import deque
