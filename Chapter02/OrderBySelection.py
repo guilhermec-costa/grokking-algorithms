@@ -1,5 +1,14 @@
 from typing import List
 
+"""
+perfomance:
+    O(n^2) 
+    
+    Each item has to be iterate to be added to a seperate list.
+    And this process has to be done each time a item is added to the other list.
+    So, it has a perfomance of O(n) * O(n), which is O(n^2)
+"""
+
 
 def searchLowerIndex(arr):
     lower_item = arr[0]
